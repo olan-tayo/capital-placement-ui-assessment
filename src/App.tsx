@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Approuter from "./router/router";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="flex gap-[10px] md:gap-[32px]">
+        <div className="w-[72px]">
+          <Sidebar />
+        </div>
+        <div className="w-full h-screen overflow-auto">
+          <Approuter />
+        </div>
+      </div>
     </div>
   );
 }
